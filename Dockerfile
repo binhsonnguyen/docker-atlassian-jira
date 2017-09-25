@@ -5,7 +5,7 @@ FROM linuxkonsult/postgres
 MAINTAINER Tom Eklöf tom@linux-konsult.com
 
 ENV AppName jira-software
-ENV AppVer 7.1.9
+ENV AppVer 7.5.0
 ENV Arch x64
 
 # Fetch the files

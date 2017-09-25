@@ -13,7 +13,7 @@ echo "debconf shared/accepted-oracle-license-v1-1 seen true" | debconf-set-selec
 apt-get -y install libpq-dev oracle-java8-installer
 
 # Add the Jira cookbook
-echo "cookbook 'jira', git: 'https://github.com/proppen/jira'" >> /Berksfile ; /opt/chef/embedded/bin/berks vendor /etc/chef/cookbooks/
+echo "cookbook 'jira', git: 'https://github.com/binhsonnguyen/jira-cookbook'" >> /Berksfile ; /opt/chef/embedded/bin/berks vendor /etc/chef/cookbooks/
 
 # Here we make any changes to postgresql for Jira, see cookbook documentation for examples.
 sed -i "s%md5sumhash%$(echo -n 'dbpassword' | openssl md5 | sed -e 's/.* /md5/')%g" /etc/chef/node.json
